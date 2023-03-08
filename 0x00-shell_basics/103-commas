@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s\n' ./..,./.,$(ls -d1 ./* | sort -k1.2d,1.3d | tr '\n' , | sed 's/,$/\n/') | sed 's/^\.\//.\//g'
+printf '%s\n' "$(printf '%s\n' ./* | sed -e 's/^\.\//.\//' -e 's/$/,/' | tr -d '\n')" | sed '1 s/^/..,\.,/' | tr ',' '\n'
