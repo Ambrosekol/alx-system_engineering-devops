@@ -1,2 +1,2 @@
 #!/bin/bash
-chown owner:staff
+chown -R owner:staff
