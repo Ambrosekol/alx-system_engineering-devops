@@ -1,2 +1,1 @@
-#!/bin/bash
-sudo chown vincent:staff /"$(readlink -f _hello)"
+#!/bin/baschown vincent:staff -h _hello
