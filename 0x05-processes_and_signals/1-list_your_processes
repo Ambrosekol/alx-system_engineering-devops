@@ -8,9 +8,6 @@
 # - Show process hierarchy
 ######################################################################################
 
-
-
-
 echo "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
 
 # Get all processes with their hierarchies using 'ps' command
