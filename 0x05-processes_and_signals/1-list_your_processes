@@ -8,4 +8,10 @@
 # - Show process hierarchy
 ######################################################################################
 
-ps -u
+
+
+
+echo "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
+
+# Get all processes with their hierarchies using 'ps' command
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command
