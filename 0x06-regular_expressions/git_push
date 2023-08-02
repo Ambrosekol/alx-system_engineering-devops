@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+git add *
+read i
+git commit -m "$i"
+git push
