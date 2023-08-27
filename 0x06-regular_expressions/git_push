@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-git add *
-echo Its time to write a commit message
-read i
-git commit -m "$i"
-git push
