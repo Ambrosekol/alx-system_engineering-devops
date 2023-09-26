@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 # Install Nginx on a server with a page that displays "hello World"
 
 sudo apt-get update -y
