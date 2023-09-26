@@ -6,4 +6,4 @@ sudo apt-get -y update
 sudo apt-get -y install nginx 
 echo 'Hello World!' > /var/www/html/index.nginx-debian.html 
 sed -i '/server_name _;/a \\nlocation /redirect_me {\nrewrite ^/redirect_me$ http://example.com/new_page permanent;\n}' /etc/nginx/sites-available/default 
-sudo service nginx start
+sudo service nginx restart
