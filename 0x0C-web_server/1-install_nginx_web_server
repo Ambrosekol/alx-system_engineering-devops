@@ -1,12 +1,12 @@
-#!/usr/bin/env bash
+#/usr/bin/env bash
 # Install Nginx on a server with a page that displays "hello World"
 
 sudo apt-get update -y
 sudo apt-get install nginx -y
-#sudo ufw allow 'Nginx HTTP'
+sudo ufw allow 'Nginx HTTP'
 #sudo ufw reload
 #sudo rm -fr /var/www/html/*
 #sudo touch /var/www/html/index.nginx-debian.html
-#sudo chown $USER /var/www/html/index.nginx-debian.html
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo chown -R $USER:$USER /var/www/html/index.nginx-debian.html
+sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
 sudo service nginx start
