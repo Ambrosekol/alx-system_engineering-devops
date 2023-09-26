@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Install Nginx on a server with a page that displays "hello World"
+
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo ufw allow 'Nginx HTTP'
+sudo ufw reload
+
