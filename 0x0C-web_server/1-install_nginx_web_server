@@ -9,3 +9,4 @@ sudo rm -fr /var/www/html/*
 sudo touch /var/www/html/index.nginx-debian.html
 sudo chown $USER /var/www/html/index.nginx-debian.html
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo service nginx start
