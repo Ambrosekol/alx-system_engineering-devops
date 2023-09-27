@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# script that installs Nginx server and redirects /redirect_me to
+# another page
+# The redirection must be a “301 Moved Permanently”
+apt-get -y update
+apt-get -y install nginx
+service nginx start
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo sed -i "/server_name _;/ a\\\trewrite ^/redirect_me https://github.com/ambrosekol permanent;" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+new_string="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
+
+sudo sed -i "s/listen 80 default_server;/$new_string/" /etc/nginx/sites-enabled/default
+service nginx restart
