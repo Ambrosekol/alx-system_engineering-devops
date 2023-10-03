@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # this installs and configures haproxy on a new machine
 
 sudo apt-get -y update
