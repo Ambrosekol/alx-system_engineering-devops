@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# make nginx a new user
+useradd -Ms /sbin/nologin nginx
+sed -i 's/user www-data;/user nginx;/' /etc/nginx/nginx.conf
+cd /etc/nginx/sites-enabled || exit
+sed -i '/listen 80;/c\    listen 8080;/' default .
+service nginx restart
