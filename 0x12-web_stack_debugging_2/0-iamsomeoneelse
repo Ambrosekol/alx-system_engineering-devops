@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# accepts an argument as a user.
+su $2
+whoami
