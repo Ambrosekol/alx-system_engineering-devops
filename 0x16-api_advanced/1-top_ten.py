@@ -19,4 +19,4 @@ def top_ten(subreddit):
     elif req.status_code == 302:
         print("None")
     else:
-        print(req.text)
+        print("None")
