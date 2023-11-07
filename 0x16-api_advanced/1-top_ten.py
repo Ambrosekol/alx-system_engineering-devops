@@ -10,7 +10,7 @@ import requests
 def top_ten(subreddit):
     """shows titles of the first 10 hot posts for reddit"""
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
-    req = requests.get(url)
+    req = requests.get(url, allow_redirects=False)
     if req.status_code == 200:
         data = req.json()
         titles = [item["data"]["title"] for item in data["data"]["children"]]
