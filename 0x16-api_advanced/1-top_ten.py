@@ -8,7 +8,7 @@ import requests
 
 
 def top_ten(subreddit):
-    """shows titles of the first 10 hot posts"""
+    """shows titles of the first 10 hot posts for reddit"""
     api = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     req = requests.get(api)
     if req.status_code == 200:
