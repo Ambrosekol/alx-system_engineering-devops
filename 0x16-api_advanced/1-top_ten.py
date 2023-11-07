@@ -16,7 +16,5 @@ def top_ten(subreddit):
         titles = [item["data"]["title"] for item in data["data"]["children"]]
         for val in titles:
             print(val)
-    elif req.status_code == 302:
-        print("None")
     else:
         print("None")
